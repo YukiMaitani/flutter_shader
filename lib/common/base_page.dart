@@ -55,12 +55,15 @@ class _BasePageState extends State<BasePage> {
     if (shader == null) {
       return const Center(child: CircularProgressIndicator());
     } else {
-      return CustomPaint(
-        painter: ShaderPainter(
-          shader: shader!,
-          uniforms: [...widget.uniforms, ...images],
+      return AspectRatio(
+        aspectRatio: 1,
+        child: CustomPaint(
+          painter: ShaderPainter(
+            shader: shader!,
+            uniforms: [...widget.uniforms, ...images],
+          ),
+          child: Container(),
         ),
-        child: Container(),
       );
     }
   }

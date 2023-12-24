@@ -32,10 +32,7 @@ extension FgShaderEx on FragmentShader {
 
 Future<ui.Image> loadUiImage(String path) async {
   final imageData = await rootBundle.load(path);
-  final ui.ImmutableBuffer buffer = await ui.ImmutableBuffer.fromUint8List(imageData.buffer.asUint8List());
-  final ui.Codec codec = await PaintingBinding.instance.instantiateImageCodecWithSize(buffer);
-  final ui.FrameInfo frameInfo = await codec.getNextFrame();
-  return frameInfo.image;
+  return await decodeImageFromList(imageData.buffer.asUint8List());
 }
 
 Future<FragmentShader> loadFragmentShader(String path) async {
