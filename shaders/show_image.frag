@@ -2,10 +2,9 @@
 
 out vec4 fragColor;
 uniform vec2 uSize;
-uniform sampler2D image;
+uniform sampler2D uTexture;
 
 void main() {
-    vec2 fragCoord = FlutterFragCoord();
     vec2 uv = FlutterFragCoord().xy / uSize;
-    fragColor = texture(image, uv.xy).rgba;
+    fragColor = texture(uTexture, uv.xy).rgba;
 }
