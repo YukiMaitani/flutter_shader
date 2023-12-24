@@ -27,3 +27,4 @@ flutter:
   shaders:
     - shaders/show_image.frag
     - shaders/nega_posi_reverse.frag
+    - shaders/cross_fading.frag
