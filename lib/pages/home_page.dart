@@ -18,6 +18,7 @@ class HomePage extends StatelessWidget {
     return ListView(
       children: [
         _buildListTile(showImagePage),
+        _buildListTile(negaPosiReversePage),
       ],
     );
   }
