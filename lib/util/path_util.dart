@@ -4,6 +4,9 @@ import 'package:flutter_shader/pages/cross_fading_page.dart';
 import 'package:flutter_shader/pages/nega_posi_reverse_page.dart';
 import 'package:flutter_shader/pages/show_image_page.dart';
 
+import '../pages/over_the_moon/over_the_moon_page.dart';
+import '../pages/over_the_moon/vector_line_page.dart';
+
 Widget getPage(String name) {
   switch (name) {
     case homePage:
@@ -14,6 +17,10 @@ Widget getPage(String name) {
       return const NegaPosiReversePage();
     case imageTransitionPage:
       return const CrossFadingPage();
+    case overTheMoonPage:
+      return const OverTheMoonPage();
+    case vectorLinePage:
+      return const VectorLinePage();
     default:
       throw Exception('Unknown name: $name');
   }
@@ -23,12 +30,15 @@ const String homePage = 'Home';
 const String showImagePage = 'ShowImage';
 const String negaPosiReversePage = 'NegaPosiReverse';
 const String imageTransitionPage = 'CrossFading';
+const String overTheMoonPage = 'OverTheMoon';
+const String vectorLinePage = 'VectorLine';
 
 const String imageDir = 'assets/';
 const String dashImage = '${imageDir}dash.jpg';
 const String flutterLogoImage = '${imageDir}flutter_logo.png';
 
 const shaderDir = 'shaders/';
+const overTheMoonDir = 'over_the_moon/';
 extension StringEx on String {
   String toSnakeCase() {
     return replaceAllMapped(RegExp('(.)([A-Z][a-z]+)'),
@@ -40,3 +50,4 @@ extension StringEx on String {
 }
 
 String getShaderPath(String name) => '$shaderDir${name.toSnakeCase()}.frag';
+String getNestShaderPath(String name, String dir) => '$shaderDir$dir${name.toSnakeCase()}.frag';

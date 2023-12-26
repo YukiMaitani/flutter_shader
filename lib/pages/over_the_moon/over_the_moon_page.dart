@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shader/util/path_util.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+import '../../util/path_util.dart';
+
+class OverTheMoonPage extends StatelessWidget {
+  const OverTheMoonPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +18,7 @@ class HomePage extends StatelessWidget {
   Widget _buildBody() {
     return ListView(
       children: [
-        _buildListTile(showImagePage),
-        _buildListTile(negaPosiReversePage),
-        _buildListTile(imageTransitionPage),
-        _buildListTile(overTheMoonPage),
+        _buildListTile(vectorLinePage),
       ],
     );
   }

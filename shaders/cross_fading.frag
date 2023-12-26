@@ -10,5 +10,5 @@ void main() {
     vec2 uv = FlutterFragCoord().xy / uSize;
     vec4 color1 = texture(uTexture1, uv.xy).rgba;
     vec4 color2 = texture(uTexture2, uv.xy).rgba;
-    fragColor = mix(color1, color2, sin(uTime));
+    fragColor = mix(color1, color2, abs(sin(uTime)));
 }

@@ -10,11 +10,12 @@ import '../util/shader_util.dart';
 class BasePage extends StatefulWidget {
   const BasePage(
       {super.key,
-      required this.name,
-      required this.imagePaths,
+      required this.name, this.shaderDir,
+      this.imagePaths = const [],
       this.uniforms = const []});
 
   final String name;
+  final String? shaderDir;
   final List<String> imagePaths;
   final List<dynamic> uniforms;
 
@@ -33,11 +34,14 @@ class _BasePageState extends State<BasePage> {
   }
 
   Future<void> setup() async {
-    for(final path in widget.imagePaths) {
+    for (final path in widget.imagePaths) {
       final image = await loadUiImage(path);
       images.add(image);
     }
-    shader = await loadFragmentShader(getShaderPath(widget.name));
+    final path = widget.shaderDir == null
+        ? getShaderPath(widget.name)
+        : getNestShaderPath(widget.name, widget.shaderDir!);
+    shader = await loadFragmentShader(path);
     setState(() {});
   }
 
