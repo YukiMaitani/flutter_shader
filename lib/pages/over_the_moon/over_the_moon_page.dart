@@ -22,6 +22,7 @@ class OverTheMoonPage extends StatelessWidget {
         _buildListTile(crossLinePage),
         _buildListTile(topWhitePage),
         _buildListTile(whiteLinePage),
+        _buildListTile(whiteBoxPage),
         // INSERT TILE HERE
       ],
     );
