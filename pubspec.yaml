@@ -30,4 +30,5 @@ flutter:
     - shaders/cross_fading.frag
     - shaders/over_the_moon/vector_line.frag
     - shaders/over_the_moon/cross_line.frag
+    - shaders/over_the_moon/top_white.frag
   # INSERT SHADER HERE

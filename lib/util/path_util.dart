@@ -7,6 +7,7 @@ import 'package:flutter_shader/pages/show_image_page.dart';
 import '../pages/over_the_moon/cross_line_page.dart';
 import '../pages/over_the_moon/over_the_moon_page.dart';
 import '../pages/over_the_moon/vector_line_page.dart';
+import '../pages/over_the_moon/top_white_page.dart';
 // INSERT IMPORT MOON HERE
 
 Widget getPage(String name) {
@@ -25,6 +26,8 @@ Widget getPage(String name) {
       return const VectorLinePage();
     case crossLinePage:
       return const CrossLinePage();
+    case topWhitePage:
+      return const TopWhitePage();
     // INSERT PAGE HERE
     default:
       throw Exception('Unknown name: $name');
@@ -38,6 +41,7 @@ const String imageTransitionPage = 'CrossFading';
 const String overTheMoonPage = 'OverTheMoon';
 const String vectorLinePage = 'VectorLine';
 const String crossLinePage = 'CrossLine';
+const String topWhitePage = 'TopWhite';
 // INSERT PAGE NAME HERE
 
 const String imageDir = 'assets/';
