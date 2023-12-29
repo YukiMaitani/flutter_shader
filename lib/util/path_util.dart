@@ -10,6 +10,7 @@ import '../pages/over_the_moon/vector_line_page.dart';
 import '../pages/over_the_moon/top_white_page.dart';
 import '../pages/over_the_moon/white_line_page.dart';
 import '../pages/over_the_moon/white_box_page.dart';
+import '../pages/over_the_moon/trapezium_page.dart';
 // INSERT IMPORT MOON HERE
 
 Widget getPage(String name) {
@@ -34,6 +35,8 @@ Widget getPage(String name) {
       return const WhiteLinePage();
     case whiteBoxPage:
       return const WhiteBoxPage();
+    case trapeziumPage:
+      return const TrapeziumPage();
     // INSERT PAGE HERE
     default:
       throw Exception('Unknown name: $name');
@@ -50,6 +53,7 @@ const String crossLinePage = 'CrossLine';
 const String topWhitePage = 'TopWhite';
 const String whiteLinePage = 'WhiteLine';
 const String whiteBoxPage = 'WhiteBox';
+const String trapeziumPage = 'Trapezium';
 // INSERT PAGE NAME HERE
 
 const String imageDir = 'assets/';
