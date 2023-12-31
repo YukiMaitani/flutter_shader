@@ -28,6 +28,7 @@ flutter:
     - shaders/show_image.frag
     - shaders/nega_posi_reverse.frag
     - shaders/cross_fading.frag
+    - shaders/uv.frag
   # INSERT SHADER HERE
 
     - shaders/over_the_moon/vector_line.frag

@@ -3,6 +3,7 @@ import 'package:flutter_shader/pages/home_page.dart';
 import 'package:flutter_shader/pages/cross_fading_page.dart';
 import 'package:flutter_shader/pages/nega_posi_reverse_page.dart';
 import 'package:flutter_shader/pages/show_image_page.dart';
+import '../pages/uv_page.dart';
 // INSERT IMPORT SHADER HERE
 
 import '../pages/over_the_moon/cross_line_page.dart';
@@ -50,6 +51,8 @@ Widget getPage(String name) {
       return const TreeFunctionPage();
     case shadowPage:
       return const ShadowPage();
+    case uvPage:
+      return const UvPage();
     // INSERT PAGE HERE
     default:
       throw Exception('Unknown name: $name');
@@ -71,6 +74,7 @@ const String trunkPage = 'Trunk';
 const String treePage = 'Tree';
 const String treeFunctionPage = 'TreeFunction';
 const String shadowPage = 'Shadow';
+const String uvPage = 'Uv';
 // INSERT PAGE NAME HERE
 
 const String imageDir = 'assets/';

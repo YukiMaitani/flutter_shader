@@ -21,6 +21,7 @@ class HomePage extends StatelessWidget {
         _buildListTile(negaPosiReversePage),
         _buildListTile(imageTransitionPage),
         _buildListTile(overTheMoonPage),
+        _buildListTile(uvPage),
         // INSERT TILE HERE
       ],
     );
