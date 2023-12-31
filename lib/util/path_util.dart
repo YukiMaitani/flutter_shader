@@ -13,6 +13,7 @@ import '../pages/over_the_moon/white_box_page.dart';
 import '../pages/over_the_moon/trapezium_page.dart';
 import '../pages/over_the_moon/trunk_page.dart';
 import '../pages/over_the_moon/tree_page.dart';
+import '../pages/over_the_moon/tree_function_page.dart';
 // INSERT IMPORT MOON HERE
 
 Widget getPage(String name) {
@@ -43,6 +44,8 @@ Widget getPage(String name) {
       return const TrunkPage();
     case treePage:
       return const TreePage();
+    case treeFunctionPage:
+      return const TreeFunctionPage();
     // INSERT PAGE HERE
     default:
       throw Exception('Unknown name: $name');
@@ -62,6 +65,7 @@ const String whiteBoxPage = 'WhiteBox';
 const String trapeziumPage = 'Trapezium';
 const String trunkPage = 'Trunk';
 const String treePage = 'Tree';
+const String treeFunctionPage = 'TreeFunction';
 // INSERT PAGE NAME HERE
 
 const String imageDir = 'assets/';
