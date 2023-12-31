@@ -35,4 +35,5 @@ flutter:
     - shaders/over_the_moon/white_box.frag
     - shaders/over_the_moon/trapezium.frag
     - shaders/over_the_moon/trunk.frag
+    - shaders/over_the_moon/tree.frag
   # INSERT SHADER HERE
