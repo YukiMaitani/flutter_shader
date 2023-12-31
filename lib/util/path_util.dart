@@ -3,6 +3,7 @@ import 'package:flutter_shader/pages/home_page.dart';
 import 'package:flutter_shader/pages/cross_fading_page.dart';
 import 'package:flutter_shader/pages/nega_posi_reverse_page.dart';
 import 'package:flutter_shader/pages/show_image_page.dart';
+// INSERT IMPORT SHADER HERE
 
 import '../pages/over_the_moon/cross_line_page.dart';
 import '../pages/over_the_moon/over_the_moon_page.dart';
