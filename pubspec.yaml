@@ -37,4 +37,5 @@ flutter:
     - shaders/over_the_moon/trunk.frag
     - shaders/over_the_moon/tree.frag
     - shaders/over_the_moon/tree_function.frag
+    - shaders/over_the_moon/shadow.frag
   # INSERT SHADER HERE
