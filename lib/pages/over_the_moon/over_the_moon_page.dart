@@ -30,8 +30,9 @@ class OverTheMoonPage extends StatelessWidget {
         _buildListTile(shadowPage),
         _buildListTile(uvFixPage),
         _buildListTile(shadowFixPage),
+        _buildListTile(repeatTreePage),
         // INSERT TILE HERE
-      ],
+      ].reversed.toList(),
     );
   }
 
