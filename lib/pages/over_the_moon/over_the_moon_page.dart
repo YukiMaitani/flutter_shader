@@ -28,6 +28,7 @@ class OverTheMoonPage extends StatelessWidget {
         _buildListTile(treePage),
         _buildListTile(treeFunctionPage),
         _buildListTile(shadowPage),
+        _buildListTile(uvFixPage),
         // INSERT TILE HERE
       ],
     );

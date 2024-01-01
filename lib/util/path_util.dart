@@ -17,6 +17,7 @@ import '../pages/over_the_moon/trunk_page.dart';
 import '../pages/over_the_moon/tree_page.dart';
 import '../pages/over_the_moon/tree_function_page.dart';
 import '../pages/over_the_moon/shadow_page.dart';
+import '../pages/over_the_moon/uv_fix_page.dart';
 // INSERT IMPORT MOON HERE
 
 Widget getPage(String name) {
@@ -53,6 +54,8 @@ Widget getPage(String name) {
       return const ShadowPage();
     case uvPage:
       return const UvPage();
+    case uvFixPage:
+      return const UvFixPage();
     // INSERT PAGE HERE
     default:
       throw Exception('Unknown name: $name');
@@ -75,6 +78,7 @@ const String treePage = 'Tree';
 const String treeFunctionPage = 'TreeFunction';
 const String shadowPage = 'Shadow';
 const String uvPage = 'Uv';
+const String uvFixPage = 'UvFix';
 // INSERT PAGE NAME HERE
 
 const String imageDir = 'assets/';
