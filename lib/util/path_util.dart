@@ -25,6 +25,7 @@ import '../pages/over_the_moon/move_in_time_page.dart';
 import '../pages/over_the_moon/random_size_page.dart';
 import '../pages/over_the_moon/flat_ground_page.dart';
 import '../pages/over_the_moon/gentle_ground_page.dart';
+import '../pages/over_the_moon/stragiht_tree_page.dart';
 // INSERT IMPORT MOON HERE
 
 Widget getPage(String name) {
@@ -77,6 +78,8 @@ Widget getPage(String name) {
       return const FlatGroundPage();
     case gentleGroundPage:
       return const GentleGroundPage();
+    case stragihtTreePage:
+      return const StragihtTreePage();
     // INSERT PAGE HERE
     default:
       throw Exception('Unknown name: $name');
@@ -107,6 +110,7 @@ const String moveInTimePage = 'MoveInTime';
 const String randomSizePage = 'RandomSize';
 const String flatGroundPage = 'FlatGround';
 const String gentleGroundPage = 'GentleGround';
+const String stragihtTreePage = 'StragihtTree';
 // INSERT PAGE NAME HERE
 
 const String imageDir = 'assets/';
