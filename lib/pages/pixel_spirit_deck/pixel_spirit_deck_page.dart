@@ -18,6 +18,7 @@ class PixelSpiritDeckPage extends StatelessWidget {
   Widget _buildBody() {
     return ListView(
       children: [
+        _buildListTile(justicePage),
         // TILE
       ],
     );

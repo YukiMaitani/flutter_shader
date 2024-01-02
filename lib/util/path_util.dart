@@ -29,6 +29,7 @@ import '../pages/over_the_moon/gentle_ground_page.dart';
 import '../pages/over_the_moon/stragiht_tree_page.dart';
 // IMPORT MOON
 
+import '../pages/pixel_spirit_deck/justice_page.dart';
 // IMPORT SPIRIT
 
 Widget getPage(String name) {
@@ -88,6 +89,8 @@ Widget getPage(String name) {
       return const StragihtTreePage();
     // PAGE MOON
 
+    case justicePage:
+      return const JusticePage();
     // PAGE SPIRIT
     default:
       throw Exception('Unknown name: $name');
@@ -124,6 +127,7 @@ const String gentleGroundPage = 'GentleGround';
 const String stragihtTreePage = 'StragihtTree';
 // NAME MOON
 
+const String justicePage = 'Justice';
 // NAME SPIRIT
 
 const String imageDir = 'assets/';

@@ -52,5 +52,5 @@ flutter:
     - shaders/over_the_moon/stragiht_tree.frag
   # MOON
 
-    - shaders/pixel_spirit_deck/test.frag
+    - shaders/pixel_spirit_deck/justice.frag
   # SPIRIT
