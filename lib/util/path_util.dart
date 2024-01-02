@@ -20,6 +20,7 @@ import '../pages/over_the_moon/shadow_page.dart';
 import '../pages/over_the_moon/uv_fix_page.dart';
 import '../pages/over_the_moon/shadow_fix_page.dart';
 import '../pages/over_the_moon/repeat_tree_page.dart';
+import '../pages/over_the_moon/random_place_page.dart';
 // INSERT IMPORT MOON HERE
 
 Widget getPage(String name) {
@@ -62,6 +63,8 @@ Widget getPage(String name) {
       return const ShadowFixPage();
     case repeatTreePage:
       return const RepeatTreePage();
+    case randomPlacePage:
+      return const RandomPlacePage();
     // INSERT PAGE HERE
     default:
       throw Exception('Unknown name: $name');
@@ -87,6 +90,7 @@ const String uvPage = 'Uv';
 const String uvFixPage = 'UvFix';
 const String shadowFixPage = 'ShadowFix';
 const String repeatTreePage = 'RepeatTree';
+const String randomPlacePage = 'RandomPlace';
 // INSERT PAGE NAME HERE
 
 const String imageDir = 'assets/';

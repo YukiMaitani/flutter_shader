@@ -44,4 +44,5 @@ flutter:
     - shaders/over_the_moon/uv_fix.frag
     - shaders/over_the_moon/shadow_fix.frag
     - shaders/over_the_moon/repeat_tree.frag
+    - shaders/over_the_moon/random_place.frag
   # INSERT MOON HERE
