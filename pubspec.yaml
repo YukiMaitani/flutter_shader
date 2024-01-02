@@ -47,4 +47,5 @@ flutter:
     - shaders/over_the_moon/random_place.frag
     - shaders/over_the_moon/move_in_time.frag
     - shaders/over_the_moon/random_size.frag
+    - shaders/over_the_moon/flat_ground.frag
   # INSERT MOON HERE
