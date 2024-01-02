@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_shader/common/shader_panter.dart';
 import 'package:flutter_shader/util/path_util.dart';
 
@@ -12,25 +13,42 @@ class BasePage extends StatefulWidget {
       {super.key,
       required this.name, this.shaderDir,
       this.imagePaths = const [],
-      this.uniforms = const []});
+      this.uniforms = const [],
+      this.needTime = false});
 
   final String name;
   final String? shaderDir;
   final List<String> imagePaths;
   final List<dynamic> uniforms;
+  final bool needTime;
 
   @override
   State<BasePage> createState() => _BasePageState();
 }
 
-class _BasePageState extends State<BasePage> {
+class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin {
   FragmentShader? shader;
   List<ui.Image?> images = [];
+  Ticker? ticker;
+  double time = 0.0;
 
   @override
   void initState() {
     super.initState();
     setup();
+  }
+
+  @override
+  void dispose() {
+    ticker?.dispose();
+    super.dispose();
+  }
+
+  void setTicker() {
+    ticker = createTicker((elapsed) {
+      time = elapsed.inMilliseconds.toDouble() / 1000.0;
+      setState(() {});
+    })..start();
   }
 
   Future<void> setup() async {
@@ -42,6 +60,9 @@ class _BasePageState extends State<BasePage> {
         ? getShaderPath(widget.name)
         : getNestShaderPath(widget.name, widget.shaderDir!);
     shader = await loadFragmentShader(path);
+    if (widget.needTime) {
+      setTicker();
+    }
     setState(() {});
   }
 
@@ -64,7 +85,11 @@ class _BasePageState extends State<BasePage> {
         child: CustomPaint(
           painter: ShaderPainter(
             shader: shader!,
-            uniforms: [...widget.uniforms, ...images],
+            uniforms: [
+              ...widget.uniforms,
+              if (widget.needTime) time,
+              ...images
+            ],
           ),
           child: Container(),
         ),
