@@ -35,6 +35,7 @@ class OverTheMoonPage extends StatelessWidget {
         _buildListTile(moveInTimePage),
         _buildListTile(randomSizePage),
         _buildListTile(flatGroundPage),
+        _buildListTile(gentleGroundPage),
         // INSERT TILE HERE
       ].reversed.toList(),
     );
