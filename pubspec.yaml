@@ -50,7 +50,9 @@ flutter:
     - shaders/over_the_moon/flat_ground.frag
     - shaders/over_the_moon/gentle_ground.frag
     - shaders/over_the_moon/stragiht_tree.frag
+    - shaders/over_the_moon/multiple_layer.frag
   # MOON
 
     - shaders/pixel_spirit_deck/justice.frag
+    - shaders/pixel_spirit_deck/strength.frag
   # SPIRIT
