@@ -5,7 +5,7 @@ import 'package:flutter_shader/pages/nega_posi_reverse_page.dart';
 import 'package:flutter_shader/pages/show_image_page.dart';
 import '../pages/pixel_spirit_deck/pixel_spirit_deck_page.dart';
 import '../pages/uv_page.dart';
-// INSERT IMPORT SHADER HERE
+// IMPORT SHADER
 
 import '../pages/over_the_moon/cross_line_page.dart';
 import '../pages/over_the_moon/over_the_moon_page.dart';
@@ -27,7 +27,9 @@ import '../pages/over_the_moon/random_size_page.dart';
 import '../pages/over_the_moon/flat_ground_page.dart';
 import '../pages/over_the_moon/gentle_ground_page.dart';
 import '../pages/over_the_moon/stragiht_tree_page.dart';
-// INSERT IMPORT MOON HERE
+// IMPORT MOON
+
+// IMPORT SPIRIT
 
 Widget getPage(String name) {
   switch (name) {
@@ -39,8 +41,13 @@ Widget getPage(String name) {
       return const NegaPosiReversePage();
     case imageTransitionPage:
       return const CrossFadingPage();
+    case uvPage:
+      return const UvPage();
     case overTheMoonPage:
       return const OverTheMoonPage();
+    case pixelSpiritDeckPage:
+      return const PixelSpiritDeckPage();
+    // PAGE SHADER
     case vectorLinePage:
       return const VectorLinePage();
     case crossLinePage:
@@ -61,8 +68,6 @@ Widget getPage(String name) {
       return const TreeFunctionPage();
     case shadowPage:
       return const ShadowPage();
-    case uvPage:
-      return const UvPage();
     case uvFixPage:
       return const UvFixPage();
     case shadowFixPage:
@@ -81,9 +86,9 @@ Widget getPage(String name) {
       return const GentleGroundPage();
     case stragihtTreePage:
       return const StragihtTreePage();
-    case pixelSpiritDeckPage:
-      return const PixelSpiritDeckPage();
-    // INSERT PAGE HERE
+    // PAGE MOON
+
+    // PAGE SPIRIT
     default:
       throw Exception('Unknown name: $name');
   }
@@ -94,6 +99,10 @@ const String showImagePage = 'ShowImage';
 const String negaPosiReversePage = 'NegaPosiReverse';
 const String imageTransitionPage = 'CrossFading';
 const String overTheMoonPage = 'OverTheMoon';
+const String uvPage = 'Uv';
+const String pixelSpiritDeckPage = 'PixelSpiritDeck';
+// NAME SHADER
+
 const String vectorLinePage = 'VectorLine';
 const String crossLinePage = 'CrossLine';
 const String topWhitePage = 'TopWhite';
@@ -104,7 +113,6 @@ const String trunkPage = 'Trunk';
 const String treePage = 'Tree';
 const String treeFunctionPage = 'TreeFunction';
 const String shadowPage = 'Shadow';
-const String uvPage = 'Uv';
 const String uvFixPage = 'UvFix';
 const String shadowFixPage = 'ShadowFix';
 const String repeatTreePage = 'RepeatTree';
@@ -114,8 +122,9 @@ const String randomSizePage = 'RandomSize';
 const String flatGroundPage = 'FlatGround';
 const String gentleGroundPage = 'GentleGround';
 const String stragihtTreePage = 'StragihtTree';
-const String pixelSpiritDeckPage = 'PixelSpiritDeck';
-// INSERT PAGE NAME HERE
+// NAME MOON
+
+// NAME SPIRIT
 
 const String imageDir = 'assets/';
 const String dashImage = '${imageDir}dash.jpg';
@@ -123,6 +132,8 @@ const String flutterLogoImage = '${imageDir}flutter_logo.png';
 
 const shaderDir = 'shaders/';
 const overTheMoonDir = 'over_the_moon/';
+const pixelSpiritDeckDir = 'pixel_spirit_deck/';
+
 extension StringEx on String {
   String toSnakeCase() {
     return replaceAllMapped(RegExp('(.)([A-Z][a-z]+)'),

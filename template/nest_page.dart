@@ -9,7 +9,7 @@ class TemplateTplPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const BasePage(
       name: templateTplPage,
-      shaderDir: overTheMoonDir,
+      shaderDir: // DIR,
       needTime: true,
     );
   }
