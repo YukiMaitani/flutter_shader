@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shader/util/path_util.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+import '../../util/path_util.dart';
+
+class PixelSpiritDeckPage extends StatelessWidget {
+  const PixelSpiritDeckPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Shaders'),
+        title: const Text('PixelSpiritDeck'),
       ),
       body: _buildBody(),
     );
@@ -17,12 +18,6 @@ class HomePage extends StatelessWidget {
   Widget _buildBody() {
     return ListView(
       children: [
-        _buildListTile(showImagePage),
-        _buildListTile(negaPosiReversePage),
-        _buildListTile(imageTransitionPage),
-        _buildListTile(uvPage),
-        _buildListTile(overTheMoonPage),
-        _buildListTile(pixelSpiritDeckPage),
         // INSERT TILE HERE
       ],
     );

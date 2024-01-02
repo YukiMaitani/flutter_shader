@@ -3,6 +3,7 @@ import 'package:flutter_shader/pages/home_page.dart';
 import 'package:flutter_shader/pages/cross_fading_page.dart';
 import 'package:flutter_shader/pages/nega_posi_reverse_page.dart';
 import 'package:flutter_shader/pages/show_image_page.dart';
+import '../pages/pixel_spirit_deck/pixel_spirit_deck_page.dart';
 import '../pages/uv_page.dart';
 // INSERT IMPORT SHADER HERE
 
@@ -80,6 +81,8 @@ Widget getPage(String name) {
       return const GentleGroundPage();
     case stragihtTreePage:
       return const StragihtTreePage();
+    case pixelSpiritDeckPage:
+      return const PixelSpiritDeckPage();
     // INSERT PAGE HERE
     default:
       throw Exception('Unknown name: $name');
@@ -111,6 +114,7 @@ const String randomSizePage = 'RandomSize';
 const String flatGroundPage = 'FlatGround';
 const String gentleGroundPage = 'GentleGround';
 const String stragihtTreePage = 'StragihtTree';
+const String pixelSpiritDeckPage = 'PixelSpiritDeck';
 // INSERT PAGE NAME HERE
 
 const String imageDir = 'assets/';
