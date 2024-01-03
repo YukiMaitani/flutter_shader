@@ -20,6 +20,7 @@ class PixelSpiritDeckPage extends StatelessWidget {
       children: [
         _buildListTile(justicePage),
         _buildListTile(strengthPage),
+        _buildListTile(deathPage),
         // TILE
       ],
     );

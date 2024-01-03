@@ -27,11 +27,11 @@ import '../pages/over_the_moon/random_size_page.dart';
 import '../pages/over_the_moon/flat_ground_page.dart';
 import '../pages/over_the_moon/gentle_ground_page.dart';
 import '../pages/over_the_moon/stragiht_tree_page.dart';
-import '../pages/over_the_moon/multiple_layer_page.dart';
 // IMPORT MOON
 
 import '../pages/pixel_spirit_deck/justice_page.dart';
 import '../pages/pixel_spirit_deck/strength_page.dart';
+import '../pages/pixel_spirit_deck/death_page.dart';
 // IMPORT SPIRIT
 
 Widget getPage(String name) {
@@ -89,14 +89,14 @@ Widget getPage(String name) {
       return const GentleGroundPage();
     case stragihtTreePage:
       return const StragihtTreePage();
-    case multipleLayerPage:
-      return const MultipleLayerPage();
     // PAGE MOON
 
     case justicePage:
       return const JusticePage();
     case strengthPage:
       return const StrengthPage();
+    case deathPage:
+      return const DeathPage();
     // PAGE SPIRIT
     default:
       throw Exception('Unknown name: $name');
@@ -136,6 +136,7 @@ const String multipleLayerPage = 'MultipleLayer';
 
 const String justicePage = 'Justice';
 const String strengthPage = 'Strength';
+const String deathPage = 'Death';
 // NAME SPIRIT
 
 const String imageDir = 'assets/';
