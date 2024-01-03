@@ -53,6 +53,7 @@ flutter:
     - shaders/over_the_moon/multiple_layer.frag
     - shaders/over_the_moon/motion_parallax.frag
     - shaders/over_the_moon/follow_drag.frag
+    - shaders/over_the_moon/atmospheric_perspective.frag
   # MOON
 
     - shaders/pixel_spirit_deck/justice.frag
