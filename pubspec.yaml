@@ -51,6 +51,7 @@ flutter:
     - shaders/over_the_moon/gentle_ground.frag
     - shaders/over_the_moon/stragiht_tree.frag
     - shaders/over_the_moon/multiple_layer.frag
+    - shaders/over_the_moon/motion_parallax.frag
   # MOON
 
     - shaders/pixel_spirit_deck/justice.frag

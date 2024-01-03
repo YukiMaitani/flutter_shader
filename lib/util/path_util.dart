@@ -28,6 +28,7 @@ import '../pages/over_the_moon/flat_ground_page.dart';
 import '../pages/over_the_moon/gentle_ground_page.dart';
 import '../pages/over_the_moon/stragiht_tree_page.dart';
 import '../pages/over_the_moon/multiple_layer_page.dart';
+import '../pages/over_the_moon/motion_parallax_page.dart';
 // IMPORT MOON
 
 import '../pages/pixel_spirit_deck/justice_page.dart';
@@ -92,6 +93,8 @@ Widget getPage(String name) {
       return const StragihtTreePage();
     case multipleLayerPage:
       return const MultipleLayerPage();
+    case motionParallaxPage:
+      return const MotionParallaxPage();
     // PAGE MOON
 
     case justicePage:
@@ -135,6 +138,7 @@ const String flatGroundPage = 'FlatGround';
 const String gentleGroundPage = 'GentleGround';
 const String stragihtTreePage = 'StragihtTree';
 const String multipleLayerPage = 'MultipleLayer';
+const String motionParallaxPage = 'MotionParallax';
 // NAME MOON
 
 const String justicePage = 'Justice';
