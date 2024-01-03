@@ -14,13 +14,15 @@ class BasePage extends StatefulWidget {
       required this.name, this.shaderDir,
       this.imagePaths = const [],
       this.uniforms = const [],
-      this.needTime = false});
+      this.needTime = false,
+      this.needGesture = false});
 
   final String name;
   final String? shaderDir;
   final List<String> imagePaths;
   final List<dynamic> uniforms;
   final bool needTime;
+  final bool needGesture;
 
   @override
   State<BasePage> createState() => _BasePageState();
@@ -30,6 +32,7 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
   FragmentShader? shader;
   List<ui.Image?> images = [];
   Ticker? ticker;
+  Offset? localPosition;
   double time = 0.0;
 
   @override
@@ -82,16 +85,25 @@ class _BasePageState extends State<BasePage> with SingleTickerProviderStateMixin
     } else {
       return AspectRatio(
         aspectRatio: 1,
-        child: CustomPaint(
-          painter: ShaderPainter(
-            shader: shader!,
-            uniforms: [
-              ...widget.uniforms,
-              if (widget.needTime) time,
-              ...images
-            ],
+        child: GestureDetector(
+          onPanUpdate: (details) {
+            if (widget.needGesture) {
+              localPosition = details.localPosition;
+              setState(() {});
+            }
+          },
+          child: CustomPaint(
+            painter: ShaderPainter(
+              shader: shader!,
+              uniforms: [
+                ...widget.uniforms,
+                if (widget.needTime) time,
+                if (widget.needGesture) localPosition,
+                ...images
+              ],
+            ),
+            child: Container(),
           ),
-          child: Container(),
         ),
       );
     }
