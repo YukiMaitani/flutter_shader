@@ -32,6 +32,7 @@ import '../pages/over_the_moon/motion_parallax_page.dart';
 import '../pages/over_the_moon/follow_drag_page.dart';
 import '../pages/over_the_moon/atmospheric_perspective_page.dart';
 import '../pages/over_the_moon/fix_edge_page.dart';
+import '../pages/over_the_moon/star_page.dart';
 // IMPORT MOON
 
 import '../pages/pixel_spirit_deck/justice_page.dart';
@@ -104,6 +105,8 @@ Widget getPage(String name) {
       return const AtmosphericPerspectivePage();
     case fixEdgePage:
       return const FixEdgePage();
+    case starPage:
+      return const StarPage();
     // PAGE MOON
 
     case justicePage:
@@ -151,6 +154,7 @@ const String motionParallaxPage = 'MotionParallax';
 const String followDragPage = 'FollowDrag';
 const String atmosphericPerspectivePage = 'AtmosphericPerspective';
 const String fixEdgePage = 'FixEdge';
+const String starPage = 'Star';
 // NAME MOON
 
 const String justicePage = 'Justice';

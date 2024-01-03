@@ -42,6 +42,7 @@ class OverTheMoonPage extends StatelessWidget {
         _buildListTile(followDragPage),
         _buildListTile(atmosphericPerspectivePage),
         _buildListTile(fixEdgePage),
+        _buildListTile(starPage),
         // TILE
       ].reversed.toList(),
     );
