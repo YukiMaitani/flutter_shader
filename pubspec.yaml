@@ -63,4 +63,5 @@ flutter:
     - shaders/pixel_spirit_deck/justice.frag
     - shaders/pixel_spirit_deck/strength.frag
     - shaders/pixel_spirit_deck/death.frag
+    - shaders/pixel_spirit_deck/wall.frag
   # SPIRIT

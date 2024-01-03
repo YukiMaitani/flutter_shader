@@ -40,6 +40,7 @@ import '../pages/over_the_moon/front_layer_page.dart';
 import '../pages/pixel_spirit_deck/justice_page.dart';
 import '../pages/pixel_spirit_deck/strength_page.dart';
 import '../pages/pixel_spirit_deck/death_page.dart';
+import '../pages/pixel_spirit_deck/wall_page.dart';
 // IMPORT SPIRIT
 
 Widget getPage(String name) {
@@ -121,6 +122,8 @@ Widget getPage(String name) {
       return const StrengthPage();
     case deathPage:
       return const DeathPage();
+    case wallPage:
+      return const WallPage();
     // PAGE SPIRIT
     default:
       throw Exception('Unknown name: $name');
@@ -168,6 +171,7 @@ const String frontLayerPage = 'FrontLayer';
 const String justicePage = 'Justice';
 const String strengthPage = 'Strength';
 const String deathPage = 'Death';
+const String wallPage = 'Wall';
 // NAME SPIRIT
 
 const String imageDir = 'assets/';
