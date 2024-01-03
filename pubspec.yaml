@@ -57,6 +57,7 @@ flutter:
     - shaders/over_the_moon/fix_edge.frag
     - shaders/over_the_moon/star.frag
     - shaders/over_the_moon/moon.frag
+    - shaders/over_the_moon/front_layer.frag
   # MOON
 
     - shaders/pixel_spirit_deck/justice.frag
