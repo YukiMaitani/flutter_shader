@@ -23,6 +23,7 @@ class HomePage extends StatelessWidget {
         _buildListTile(uvPage),
         _buildListTile(overTheMoonPage),
         _buildListTile(pixelSpiritDeckPage),
+        _buildListTile(flagPage),
         // TILE
       ],
     );

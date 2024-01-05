@@ -5,6 +5,7 @@ import 'package:flutter_shader/pages/nega_posi_reverse_page.dart';
 import 'package:flutter_shader/pages/show_image_page.dart';
 import '../pages/pixel_spirit_deck/pixel_spirit_deck_page.dart';
 import '../pages/uv_page.dart';
+import '../pages/flag_page.dart';
 // IMPORT SHADER
 
 import '../pages/over_the_moon/cross_line_page.dart';
@@ -59,6 +60,8 @@ Widget getPage(String name) {
       return const OverTheMoonPage();
     case pixelSpiritDeckPage:
       return const PixelSpiritDeckPage();
+    case flagPage:
+      return const FlagPage();
     // PAGE SHADER
     case vectorLinePage:
       return const VectorLinePage();
@@ -137,6 +140,7 @@ const String imageTransitionPage = 'CrossFading';
 const String overTheMoonPage = 'OverTheMoon';
 const String uvPage = 'Uv';
 const String pixelSpiritDeckPage = 'PixelSpiritDeck';
+const String flagPage = 'Flag';
 // NAME SHADER
 
 const String vectorLinePage = 'VectorLine';
